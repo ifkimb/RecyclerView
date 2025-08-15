@@ -40,6 +40,7 @@ public class ListaProdutosActivity extends AppCompatActivity {
         lstProdutos.add(new Produtos("sabonete", R.drawable.sabonete));
         lstProdutos.add(new Produtos("spiderman jogo", R.drawable.spiderman_game));
         lstProdutos.add(new Produtos("zelda jogo", R.drawable.zelda));
+        lstProdutos.add(new Produtos("notebook", R.drawable.notebook));
 
         idListaProdutos = findViewById(R.id.idListaProdutos);
     }
