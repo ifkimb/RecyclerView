@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -36,5 +37,17 @@ public class ListaInicioActivity extends AppCompatActivity {
         lstLabubu.add(new Labubu("labubu halloween", R.drawable.labubu4));
         lstLabubu.add(new Labubu("labubu demôniaco", R.drawable.labubu5));
 
+
+        idListaLabubu = findViewById(R.id.idListaLabubu);
+
+        //tipo de layout
+        idListaLabubu.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
+
+        //instanciar o adaptador
+        AdaptadorLabubu adapter = new AdaptadorLabubu(getApplicationContext(),lstLabubu);
+
+        idListaLabubu.hasFixedSize();
+
+        idListaLabubu.setAdapter(adapter);
     }
 }

@@ -15,11 +15,11 @@ import java.util.List;
 
 public class AdaptadorLabubu extends RecyclerView.Adapter<AdaptadorLabubu.ViewHolder> {
     private Context context;
-    private List <Produtos> lstLabubu;
+    private List <Labubu> lstLabubu;
 
-    public AdaptadorLabubu(Context context, List<Produtos> lstProdutos) {
-        this.context = context;
-        this.lstLabubu = lstProdutos;
+    public AdaptadorLabubu(Context contextl, List<Labubu> lstLabubu) {
+        this.context = contextl;
+        this.lstLabubu = lstLabubu;
     }
 
     @NonNull
@@ -32,10 +32,10 @@ public class AdaptadorLabubu extends RecyclerView.Adapter<AdaptadorLabubu.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.modTituloProduto.setText(lstLabubu.get(position).getTitulo());
-        holder.modImagemProduto.setImageResource(lstLabubu.get(position).getImage());
+        holder.modTituloLabubu.setText(lstLabubu.get(position).getTitulo());
+        holder.modImagemLabubu.setImageResource(lstLabubu.get(position).getImage());
 
-        holder.cardProdutos.setOnClickListener(new View.OnClickListener() {
+        holder.cardLabubu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
