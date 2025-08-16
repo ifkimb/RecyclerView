@@ -53,6 +53,8 @@ public class ListaProdutosActivity extends AppCompatActivity {
         //instanciar o adaptador
         AdaptadorProdutos adapter = new AdaptadorProdutos(getApplicationContext(),lstProdutos);
 
+        idListaProdutos.hasFixedSize();
+
         idListaProdutos.setAdapter(adapter);
     }
 }
